@@ -2,4 +2,4 @@
 
 Alexandre B. Leitão, Ramesh Arunkumar, Jonathan P. Day, Nancy Hanna, Aarathi Devi, Matthew P. Hayes, Francis Jiggins
 
-The folders represent the code to generate figures for the associated manuscript.
+The folders contain the code to generate the figures in the associated manuscript.

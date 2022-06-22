@@ -1,0 +1,192 @@
+>Running CIBERSORTxFractions...
+>[Options] mixture: files/ar885@cam.ac.uk/read_count.txt
+>[Options] sigmatrix: files/ar885@cam.ac.uk/CIBERSORTx_Job10_GSE148826_intergrated_rna_count_matrix3_inferred_phenoclasses.CIBERSORTx_Job10_GSE148826_intergrated_rna_count_matrix3_inferred_refsample.bm.K999.txt
+>[Options] perm: 100
+>[Options] verbose: TRUE
+>[Options] rmbatchSmode: TRUE
+>[Options] refsample: files/ar885@cam.ac.uk/GSE148826_intergrated_rna_count_matrix3.txt
+>[Options] QN: FALSE
+>[Options] outdir: files/ar885@cam.ac.uk/results/
+>[Options] label: Job11
+>=============CIBERSORTx Settings===============
+>Mixture file: files/ar885@cam.ac.uk/read_count.txt 
+>Signature matrix file: files/ar885@cam.ac.uk/CIBERSORTx_Job10_GSE148826_intergrated_rna_count_matrix3_inferred_phenoclasses.CIBERSORTx_Job10_GSE148826_intergrated_rna_count_matrix3_inferred_refsample.bm.K999.txt 
+>Number of permutations set to: 100 
+>Enable verbose output
+>Do S-mode batch correction
+>==================CIBERSORTx===================
+>Adjusting mixtures with S-mode batch correction.
+>Running CIBERSORTx on unadjusted mixtures with S-mode adjusted signature matrix.
+>=============CIBERSORTx Settings===============
+>Mixture file: files/ar885@cam.ac.uk/read_count.txt 
+>Signature matrix file: files/ar885@cam.ac.uk/results//CIBERSORTx_Job11_sigmatrix_Adjusted.txt 
+>Number of permutations set to: 100 
+>Enable verbose output
+>==================CIBERSORTx===================
+P	1	%	
+P	2	%	
+P	3	%	
+P	4	%	
+P	5	%	
+P	6	%	
+P	7	%	
+P	8	%	
+P	9	%	
+P	10	%	
+P	11	%	
+P	12	%	
+P	13	%	
+P	14	%	
+P	15	%	
+P	16	%	
+P	17	%	
+P	18	%	
+P	19	%	
+P	20	%	
+P	21	%	
+P	22	%	
+P	23	%	
+P	24	%	
+P	25	%	
+P	26	%	
+P	27	%	
+P	28	%	
+P	29	%	
+P	30	%	
+P	31	%	
+P	32	%	
+P	33	%	
+P	34	%	
+P	35	%	
+P	36	%	
+P	37	%	
+P	38	%	
+P	39	%	
+P	40	%	
+P	41	%	
+P	42	%	
+P	43	%	
+P	44	%	
+P	45	%	
+P	46	%	
+P	47	%	
+P	48	%	
+P	49	%	
+P	50	%	
+P	51	%	
+P	52	%	
+P	53	%	
+P	54	%	
+P	55	%	
+P	56	%	
+P	57	%	
+P	58	%	
+P	59	%	
+P	60	%	
+P	61	%	
+P	62	%	
+P	63	%	
+P	64	%	
+P	65	%	
+P	66	%	
+P	67	%	
+P	68	%	
+P	69	%	
+P	70	%	
+P	71	%	
+P	72	%	
+P	73	%	
+P	74	%	
+P	75	%	
+P	76	%	
+P	77	%	
+P	78	%	
+P	79	%	
+P	80	%	
+P	81	%	
+P	82	%	
+P	83	%	
+P	84	%	
+P	85	%	
+P	86	%	
+P	87	%	
+P	88	%	
+P	89	%	
+P	90	%	
+P	91	%	
+P	92	%	
+P	93	%	
+P	94	%	
+P	95	%	
+P	96	%	
+P	97	%	
+P	98	%	
+P	99	%	
+P	100	%	
+column PLASM2 LAM2 PLASM1 LAM1 LAM3 CC AMP MET P-value Correlation RMSE %Completed 
+1 0.123386805916334 0.108062451545293 0.596182690100956 0 0.0120105275461721 0.134483369671259 0.0258741552199861 8.333333 
+2 0.173036514145735 0.131511394810339 0.410503428218327 0 0.0604602672270253 0.141391850935126 0.0561190610975505 16.66667 
+3 0.198479655591254 0.0357582541876817 0.531515243870787 0 0.0133428913255124 0.113272566351431 0.0784942218493011 25 
+4 0.138621309948713 0.0264651915890772 0.608792035720096 0 0.0555044382183433 0.149320309081922 0.0212967154418494 33.33333 
+5 0.0533288312774087 0.122142582821727 0.540382036676541 0 0.0994923126296388 0.1633569168091 0.0212973197855836 41.66667 
+6 0.0676686222142851 0.26460728649188 0.392129980999859 0 0.204239184035621 0.0713549262583555 0 50 
+7 0.131871271246579 0.153251339846011 0.471959284427559 0 0.118054410842838 0.105807105456532 0.0190565881804804 58.33333 
+8 0.0736885939577974 0.120030463752384 0.506244957341207 0 0.172588676271837 0.107797516491167 0.0196497921856082 66.66667 
+9 0.0100296446800839 0.595413496286619 0.0435380313084461 0.0328837364074425 0.305644276221423 0.00178072576170189 0 75 
+10 0.00635166597959412 0.624071194838568 0.0599523309851637 0.0483431082846197 0.251212297635527 0.00335490979712133 0 83.33333 
+11 0.0156329126719529 0.698039906686418 0.04283456518918 0.0506545540665486 0.179434764439103 0.00394329770622441 0 91.66667 
+12 0.012674605309474 0.707583756427829 0.0442610120159861 0.0364032587020542 0.184250544372707 0.00278901991849931 0 100 
+                                          PLASM2       LAM2     PLASM1
+Hemocytes_Control_oil_10.out.bam     0.123386806 0.10806245 0.59618269
+Hemocytes_Control_oil_13.out.bam     0.173036514 0.13151139 0.41050343
+Hemocytes_Control_oil_1.out.bam      0.198479656 0.03575825 0.53151524
+Hemocytes_Control_oil_5.out.bam      0.138621310 0.02646519 0.60879204
+Hemocytes_Oil_oil_11.out.bam         0.053328831 0.12214258 0.54038204
+Hemocytes_Oil_oil_14.out.bam         0.067668622 0.26460729 0.39212998
+Hemocytes_Oil_oil_2.out.bam          0.131871271 0.15325134 0.47195928
+Hemocytes_Oil_oil_6.out.bam          0.073688594 0.12003046 0.50624496
+Hemocytes_WaspExtract_oil_12.out.bam 0.010029645 0.59541350 0.04353803
+Hemocytes_WaspExtract_oil_15.out.bam 0.006351666 0.62407119 0.05995233
+Hemocytes_WaspExtract_oil_3.out.bam  0.015632913 0.69803991 0.04283457
+Hemocytes_WaspExtract_oil_7.out.bam  0.012674605 0.70758376 0.04426101
+                                           LAM1       LAM3          CC
+Hemocytes_Control_oil_10.out.bam     0.00000000 0.01201053 0.134483370
+Hemocytes_Control_oil_13.out.bam     0.00000000 0.06046027 0.141391851
+Hemocytes_Control_oil_1.out.bam      0.00000000 0.01334289 0.113272566
+Hemocytes_Control_oil_5.out.bam      0.00000000 0.05550444 0.149320309
+Hemocytes_Oil_oil_11.out.bam         0.00000000 0.09949231 0.163356917
+Hemocytes_Oil_oil_14.out.bam         0.00000000 0.20423918 0.071354926
+Hemocytes_Oil_oil_2.out.bam          0.00000000 0.11805441 0.105807105
+Hemocytes_Oil_oil_6.out.bam          0.00000000 0.17258868 0.107797516
+Hemocytes_WaspExtract_oil_12.out.bam 0.03288374 0.30564428 0.001780726
+Hemocytes_WaspExtract_oil_15.out.bam 0.04834311 0.25121230 0.003354910
+Hemocytes_WaspExtract_oil_3.out.bam  0.05065455 0.17943476 0.003943298
+Hemocytes_WaspExtract_oil_7.out.bam  0.03640326 0.18425054 0.002789020
+                                            AMP         MET P-value Correlation
+Hemocytes_Control_oil_10.out.bam     0.02587416 0.000000000       0   0.9589716
+Hemocytes_Control_oil_13.out.bam     0.05611906 0.026977484       0   0.9873515
+Hemocytes_Control_oil_1.out.bam      0.07849422 0.029137167       0   0.9145411
+Hemocytes_Control_oil_5.out.bam      0.02129672 0.000000000       0   0.9855106
+Hemocytes_Oil_oil_11.out.bam         0.02129732 0.000000000       0   0.9850697
+Hemocytes_Oil_oil_14.out.bam         0.00000000 0.000000000       0   0.9756079
+Hemocytes_Oil_oil_2.out.bam          0.01905659 0.000000000       0   0.9604320
+Hemocytes_Oil_oil_6.out.bam          0.01964979 0.000000000       0   0.9337138
+Hemocytes_WaspExtract_oil_12.out.bam 0.00000000 0.010710089       0   0.9680813
+Hemocytes_WaspExtract_oil_15.out.bam 0.00000000 0.006714492       0   0.9756420
+Hemocytes_WaspExtract_oil_3.out.bam  0.00000000 0.009459999       0   0.9739067
+Hemocytes_WaspExtract_oil_7.out.bam  0.00000000 0.012037803       0   0.9707708
+                                          RMSE
+Hemocytes_Control_oil_10.out.bam     0.6212931
+Hemocytes_Control_oil_13.out.bam     0.5771538
+Hemocytes_Control_oil_1.out.bam      0.6805560
+Hemocytes_Control_oil_5.out.bam      0.5680946
+Hemocytes_Oil_oil_11.out.bam         0.5319367
+Hemocytes_Oil_oil_14.out.bam         0.6991313
+Hemocytes_Oil_oil_2.out.bam          0.6750117
+Hemocytes_Oil_oil_6.out.bam          0.6783298
+Hemocytes_WaspExtract_oil_12.out.bam 0.6238023
+Hemocytes_WaspExtract_oil_15.out.bam 0.6340920
+Hemocytes_WaspExtract_oil_3.out.bam  0.6444400
+Hemocytes_WaspExtract_oil_7.out.bam  0.6419891
+Suffix:  Adjusted
+All done.

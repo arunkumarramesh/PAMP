@@ -1,0 +1,23 @@
+Treatment,Replica,Melanized,Non_Melanized,Total,Proportion_Melanized,Dissection_Date,Researcher
+Oil + Male Wasp Extract,1,30,4,34,0.882352941,2018_09_05,Alex
+Oil + Male Wasp Extract,2,35,3,38,0.921052632,2018_09_05,Alex
+Oil + Female Wasp Extract,1,35,2,37,0.945945946,2018_09_05,Alex
+Oil + Female Wasp Extract,2,29,5,34,0.852941176,2018_09_05,Alex
+Oil + Fly Extract,1,0,35,35,0,2018_09_05,Alex
+Oil + Fly Extract,2,0,37,37,0,2018_09_05,Alex
+Oil,1,1,34,35,0.028571429,2018_09_05,Alex
+Oil,2,0,34,34,0,2018_09_05,Alex
+Oil + Wasp Infection,1,13,5,18,0.722222222,2018_09_05,Alex
+Oil + Wasp Infection,2,11,4,15,0.733333333,2018_09_05,Alex
+Oil + Wasp Infection,3,15,2,17,0.882352941,2018_09_05,Alex
+Oil + Male Wasp Extract,3,30,6,36,0.833333333,2018_09_06,Alex
+Oil + Male Wasp Extract,4,26,4,30,0.866666667,2018_09_06,Alex
+Oil + Female Wasp Extract,3,29,7,36,0.805555556,2018_09_06,Alex
+Oil + Female Wasp Extract,4,22,9,31,0.709677419,2018_09_06,Alex
+Oil + Fly Extract,3,1,35,36,0.027777778,2018_09_06,Alex
+Oil + Fly Extract,4,0,34,34,0,2018_09_06,Alex
+Oil,3,1,29,30,0.033333333,2018_09_06,Alex
+Oil,4,0,35,35,0,2018_09_06,Alex
+Oil + Wasp Infection,4,19,4,23,0.826086957,2018_09_06,Alex
+Oil + Wasp Infection,5,16,5,21,0.761904762,2018_09_06,Alex
+Oil + Wasp Infection,6,13,2,15,0.866666667,2018_09_06,Alex

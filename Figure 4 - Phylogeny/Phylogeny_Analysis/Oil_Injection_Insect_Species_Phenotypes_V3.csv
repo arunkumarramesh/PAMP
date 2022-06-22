@@ -1,0 +1,45 @@
+Treatment,Order,Parasitoid,Melanized,Non_Melanized,Total,Proportion_Melanization,Injection_Date,Obs,Divergence_Time_from_Drosophila_melanogaster,CI,Parasitoid,Specimen_part
+Drosophila_melanogaster,Diptera,No,5,25,30,0.166666667,2018_07_24,,0,,0,Whole
+Drosophila_ananassae,Diptera,No,1,42,43,0.023255814,2018_08_10,,34,16 - 52,0,Whole
+Drosophila_affinis,Diptera,No,0,29,29,0,2018_08_06,,37,26 - 48,0,Whole
+Drosophila_obscura,Diptera,No,3,34,37,0.081081081,2018_08_06,,37,26 - 48,0,Whole
+Drosophila_pseudoobscura,Diptera,No,2,36,38,0.052631579,2018_08_06,,37,26 - 48,0,Whole
+Drosophila_euronotus,Diptera,No,11,22,33,0.333333333,2018_08_03,,50,32 - 64,0,Whole
+Drosophila_immigrans,Diptera,No,1,39,40,0.025,2018_08_06,,50,32 - 64,0,Whole
+Drosophila_lacicola,Diptera,No,7,21,28,0.25,2018_08_03,,50,32 - 64,0,Whole
+Drosophila_virilis,Diptera,No,2,35,37,0.054054054,2018_08_03,,50,32 - 64,0,Whole
+Zaprionus_tuberculatus,Diptera,No,6,32,38,0.157894737,2018_08_03,,50,32 - 64,0,Whole
+Drosophila_sturtevanti,Diptera,No,2,31,33,0.060606061,2018_08_03,,50,35 - 70,0,Whole
+Scaptodrosophila_pattersoni,Diptera,No,6,22,28,0.214285714,2018_08_03,,65,70 - 74,0,Whole
+Eristalis_tenax,Diptera,No,13,24,37,0.351351351,2018_07_31,,132,70 - 140,0,Thorax
+Sarcophaga_sp.,Diptera,No,12,21,33,0.363636364,2018_08_07,,132,94 - 170,0,Thorax
+Lucilia_sp.,Diptera,No,1,34,35,0.028571429,2018_08_10,,132,94 - 170,0,Whole
+Autographa_gamma,Lepidoptera,No,19,20,39,0.487179487,2018_07_30,,272,217 - 314,0,Thorax
+Maniola_jurtina,Lepidoptera,No,13,11,24,0.541666667,2018_07_27,,272,217 - 314,0,Thorax
+Pieris_brassicae,Lepidoptera,No,12,27,39,0.307692308,2018_07_26,,272,217 - 314,0,Thorax
+Pieris_rapae,Lepidoptera,No,13,14,27,0.402031063,2018_07_25,,272,217 - 314,0,Thorax
+Plodia_interpunctella,Lepidoptera,No,25,16,41,0.609756098,2018_08_07,,272,217 - 314,0,Whole
+Calvia_quatuordecimguttata,Coleoptera,No,3,18,21,0.142857143,2018_08_06,,310,275 - 345,0,Whole
+Coccinella_septempunctata,Coleoptera,No,10,18,28,0.357142857,2018_08_02,,310,275 - 345,0,Whole
+Pterostichus_madidus,Coleoptera,No,2,30,32,0.0625,2018_08_02,,310,275 - 345,0,Thorax
+Rhagonycha_fulva,Coleoptera,No,18,18,36,0.5,2018_07_31,,310,275 - 345,0,Thorax
+Sitona_sp.,Coleoptera,No,7,20,27,0.259259259,2018_08_02,,310,275 - 345,0,Whole
+Tenebrio_molitor,Coleoptera,No,12,19,31,0.387096774,2018_07_27,,310,275 - 345,0,Thorax
+Lagria_hirta,Coleoptera,No,13,26,39,0.333333333,2018_08_10,,310,275 - 345,0,Whole
+Asobara_tabida,Hymenoptera,Yes,19,4,23,0.826086957,2018_07_24,,325,291 - 359,1,Whole
+Bombus_hypnorum,Hymenoptera,No,2,29,31,0.064516129,2018_07_26,,325,291 - 359,0,Thorax
+Bombus_pascuorum,Hymenoptera,No,14,26,40,0.35,2018_08_07,,325,291 - 359,0,Thorax
+Ectemnius_sp.,Hymenoptera,No,3,33,36,0.083333333,2018_07_25,,325,291 - 359,0,Thorax
+Lasius_niger,Hymenoptera,No,24,7,31,0.774193548,2018_07_27,,325,291 - 359,0,Thorax
+Leptopilina_boulardi,Hymenoptera,Yes,28,9,37,0.777899972,2018_07_24,,325,291 - 359,0,Whole
+Vespula_vulgaris,Hymenoptera,No,6,30,36,0.166666667,2018_08_07,,325,291 - 359,0,Thorax
+Chorthippus_sp.,Orthoptera,No,8,32,40,0.2,2018_07_30,,358,323 - 392,0,Thorax
+Leptophyes_punctatissima,Orthoptera,No,4,25,29,0.137931034,2018_08_02,,358,323 - 392,1,Thorax
+Meconema_thalassinum,Orthoptera,No,14,23,37,0.378378378,2018_08_07,,358,323 - 392,0,Thorax
+Omocestus_viridulus,Orthoptera,No,4,33,37,0.108108108,2018_08_10,,358,323 - 392,0,Thorax
+Forficula_auricularia,Dermaptera,No,19,14,33,0.575757576,2018_08_06,,358,323 - 392 ,0,Whole
+Coreus_marginatus,Hemiptera,No,19,11,30,0.633333333,2018_07_31,,358,325 - 391,0,Thorax
+Evacanthus_interruptus,Hemiptera,No,20,18,38,0.526315789,2018_08_07,,358,325 - 391,0,Whole
+Heterogaster_urticae,Hemiptera,No,12,21,33,0.363636364,2018_08_06,,358,325 - 391,0,Whole
+Gerris_lacustris,Hemiptera,No,15,23,38,0.394736842,2018_08_10,,358,325 - 391,0,Whole
+Ischnura_elegans,Odonata,No,4,32,36,0.111111111,2018_08_10,,413,384 - 442,0,Thorax

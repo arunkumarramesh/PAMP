@@ -1,5 +1,3 @@
-fatbody
-
 /scratch/Arun/Projects/example/STAR-2.6.0a/source/STAR --runMode genomeGenerate --genomeDir STARindex/ --genomeFastaFiles dmel-all-chromosome-r6.28.fasta --sjdbGTFfile dmel-all-r6.28.gtf --sjdbOverhang 49 --runThreadN 20&
 
 for file in *3.r_1.fq.gz; do java -jar /scratch/Arun/Software/Trimmomatic-0.36/trimmomatic-0.36.jar SE -phred33 $file ${file/3.r_1.fq.gz/3.r_trim_1.fq.gz} ILLUMINACLIP:/scratch/Arun/Software/Trimmomatic-0.36/adapters/TruSeq3-SE.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36 -threads 25; done&

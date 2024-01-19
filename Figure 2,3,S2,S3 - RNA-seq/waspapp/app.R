@@ -30,12 +30,20 @@ server <- function(input, output) {
 }
 
 ui <- fluidPage(
-  headerPanel('Wasp induced D.mel expression'),
+  headerPanel('Wasp-induced gene expression browser'),
   sidebarPanel(
     textAreaInput('gene', 'Input gene names separated by comma:', value = "", width = NULL, placeholder = 'e.g. FBgn0016075,FBgn0000299'),
     actionButton("do", "Evaluate!")
   ),
-  mainPanel(plotOutput("plot1")
+  mainPanel(
+    p("Gene expression in two immune tissues in Drosophila melanogaster larvae: Fat body and Hemocytes (blood cells)"),
+    p("Control: Untreated"),
+    p("Oil: Immune induction through injection of clear oil droplet into Drosophila"),
+    p("Wasp extract: Immune induction through injection of oil droplet containing parasitic wasp (Leptopilina boulardi) tissue into Drosophila"),
+    p("CPM: Counts per million, sequencing depth-normalized read counts"),
+    p("Full data available at https://catalogue.ceh.ac.uk/documents/06ea87f3-476d-40fd-acce-e6923e786d48"),
+    p("Please post questions at https://github.com/arunkumarramesh/PAMP/"),
+    plotOutput("plot1")
   )
 )
 

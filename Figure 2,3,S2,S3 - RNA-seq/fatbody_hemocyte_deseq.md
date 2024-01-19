@@ -12,20 +12,14 @@ for file in *3.r_1.fq.gz; do java -jar /scratch/Arun/Software/Trimmomatic-0.36/t
 ```
 Align reads using STAR
 ```
-for file in *.s_3.r_trim_1.fq.gz; do /scratch/Arun/Projects/example/STAR-2.6.0a/source/STAR --runMode alignReads --genomeDir /scratch/Arun/Reference/Drosophila_melanogaster/Flybase/STARindex/ --readFilesIn $file --readFilesCommand zcat --outFileNamePrefix ${file/.s_3.r_trim_1.fq.gz//} --outFilterMultimapNmax 1 --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --twopassMode Basic --runThreadN 35; done&
+for file in *.s_3.r_trim_1.fq.gz; do /scratch/Arun/Projects/example/STAR-2.6.0a/source/STAR --runMode alignReads --genomeDir /scratch/Arun/Reference/Drosophila_melanogaster/Flybase/STARindex/ --readFilesIn $file --readFilesCommand zcat --outFileNamePrefix ${file/.s_3.r_trim_1.fq.gz/rRNA/} --outFilterMultimapNmax 10000000000 --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --twopassMode Basic --runThreadN 35; done&
 ```
- 
-
- Mapped BAM quality check
+Mapped BAM quality check
 ```
 java -Xmx4G -jar /scratch/Arun/Projects/example/QoRTs.jar --singleEnded –maxReadLength 50 --seqReadCt 8967167 --generatePlots Aligned.sortedByCoord.out.bam /scratch/Arun/Reference/Drosophila_melanogaster/Flybase/dmel-all-r6.28.gtf QC/
 /scratch/Arun/Software/qualimap_v2.2.1/qualimap rnaseq -outdirresults/ -bamAligned.sortedByCoord.out.bam -gtf/scratch/Arun/Reference/Drosophila_melanogaster/Flybase/dmel-all-r6.28.gtf--java-mem-size=8G
- 
- 
-for file in *.s_3.r_trim_1.fq.gz; do /scratch/Arun/Projects/example/STAR-2.6.0a/source/STAR --runMode alignReads --genomeDir /scratch/Arun/Reference/Drosophila_melanogaster/Flybase/STARindex/ --readFilesIn $file --readFilesCommand zcat --outFileNamePrefix ${file/.s_3.r_trim_1.fq.gz/rRNA/} --outFilterMultimapNmax 10000000000 --outReadsUnmapped Fastx --outSAMtype BAM SortedByCoordinate --twopassMode Basic --runThreadN 35; done&
 ```
 Count reads using featureCounts
-
 ```
 /scratch/Arun/Projects/example/subread-1.6.2-source/bin/featureCounts -t gene -a /scratch/Arun/Reference/Drosophila_melanogaster/Flybase/dmel-all-r6.28.gtf -Q 10 -o gene_count_mq10.txt -T 15 *.out.bam >out 2>err&
 ```

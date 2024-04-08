@@ -63,11 +63,86 @@ mdata_Delta_Ct_summary = ddply(mdata_Delta_Ct,.(Gene,Treatment),  summarise,
 colours=rep(c("red","green","blue"),11)
 
 #Plot Delta Ct
-p = ggplot(mdata_Delta_Ct_summary, aes(x=Treatment, y=mean_DeltaCt))+
+scale_override <- function(which, scale) {
+  if(!is.numeric(which) || (length(which) != 1) || (which %% 1 != 0)) {
+    stop("which must be an integer of length 1")
+  }
+  
+  if(is.null(scale$aesthetics) || !any(c("x", "y") %in% scale$aesthetics)) {
+    stop("scale must be an x or y position scale")
+  }
+  
+  structure(list(which = which, scale = scale), class = "scale_override")
+}
+
+CustomFacetWrap <- ggproto(
+  "CustomFacetWrap", FacetWrap,
+  init_scales = function(self, layout, x_scale = NULL, y_scale = NULL, params) {
+    # make the initial x, y scales list
+    scales <- ggproto_parent(FacetWrap, self)$init_scales(layout, x_scale, y_scale, params)
+    
+    if(is.null(params$scale_overrides)) return(scales)
+    
+    max_scale_x <- length(scales$x)
+    max_scale_y <- length(scales$y)
+    
+    # ... do some modification of the scales$x and scales$y here based on params$scale_overrides
+    for(scale_override in params$scale_overrides) {
+      which <- scale_override$which
+      scale <- scale_override$scale
+      
+      if("x" %in% scale$aesthetics) {
+        if(!is.null(scales$x)) {
+          if(which < 0 || which > max_scale_x) stop("Invalid index of x scale: ", which)
+          scales$x[[which]] <- scale$clone()
+        }
+      } else if("y" %in% scale$aesthetics) {
+        if(!is.null(scales$y)) {
+          if(which < 0 || which > max_scale_y) stop("Invalid index of y scale: ", which)
+          scales$y[[which]] <- scale$clone()
+        }
+      } else {
+        stop("Invalid scale")
+      }
+    }
+    
+    # return scales
+    scales
+  }
+)
+
+facet_wrap_custom <- function(..., scale_overrides = NULL) {
+  # take advantage of the sanitizing that happens in facet_wrap
+  facet_super <- facet_wrap(...)
+  
+  # sanitize scale overrides
+  if(inherits(scale_overrides, "scale_override")) {
+    scale_overrides <- list(scale_overrides)
+  } else if(!is.list(scale_overrides) || 
+            !all(vapply(scale_overrides, inherits, "scale_override", FUN.VALUE = logical(1)))) {
+    stop("scale_overrides must be a scale_override object or a list of scale_override objects")
+  }
+  
+  facet_super$params$scale_overrides <- scale_overrides
+  
+  ggproto(NULL, CustomFacetWrap,
+          shrink = facet_super$shrink,
+          params = facet_super$params
+  )
+}
+
+
+ylims <- mdata_Delta_Ct %>%
+  dplyr::group_by(Gene) %>%
+  dplyr::summarise(floor(min(DeltaCt)),ceiling(max(DeltaCt)))
+colnames(ylims)[2:3] <- c("ymin","ymax")
+
+p = ggplot(data=mdata_Delta_Ct,aes(x=Treatment,y=DeltaCt,fill=Treatment,color=Treatment))+
   #next line stopes error bars overlapping border
-  geom_errorbar(aes(ymin=CI_Lower-0.5, ymax=CI_Upper+0.5), width=.4,colour="white")+
-  geom_errorbar(aes(ymin=CI_Lower, ymax=CI_Upper), width=.4)+
-  geom_point(stat='identity', aes(fill=Treatment,color=Treatment),size=2)+
+  geom_errorbar(data=mdata_Delta_Ct_summary,aes(x=Treatment, y=mean_DeltaCt,ymin=CI_Lower-0.5, ymax=CI_Upper+0.5), width=.4,colour="white")+
+  geom_errorbar(data=mdata_Delta_Ct_summary,aes(x=Treatment, y=mean_DeltaCt,ymin=CI_Lower, ymax=CI_Upper), width=.4,color="black",)+
+  geom_jitter(width=0.25,height=0,size=1, alpha=0.6) +
+  geom_point(data=mdata_Delta_Ct_summary,stat='identity', aes(x=Treatment, y=mean_DeltaCt),size=1,shape=2,color="black",fill="black")+
   
   scale_color_manual(values = c('grey40', 'pink','cyan'))+
   scale_y_continuous(expand = c(0, 0))+
@@ -80,9 +155,21 @@ p = ggplot(mdata_Delta_Ct_summary, aes(x=Treatment, y=mean_DeltaCt))+
         axis.text.y = element_text(size=12),
         strip.text.x = element_text(size = 10,face = "italic"),
         legend.position = "none",
- #       panel.border = element_blank(),strip.text = element_text(face = "italic")
+        #       panel.border = element_blank(),strip.text = element_text(face = "italic")
         axis.line = element_line(colour = "grey30"))+
-  facet_wrap(~Gene,scales="free_y",nrow=3)
+  facet_wrap_custom(~Gene,scales="free_y",nrow=3,scale_overrides = list(
+    scale_override(1, scale_y_continuous(limits = c(as.integer(ylims[1,2]), as.integer(ylims[1,3])))),
+    scale_override(2, scale_y_continuous(limits = c(as.integer(ylims[2,2]), as.integer(ylims[2,3])))),
+    scale_override(3, scale_y_continuous(limits = c(as.integer(ylims[3,2]), as.integer(ylims[3,3])))),
+    scale_override(4, scale_y_continuous(limits = c(as.integer(ylims[4,2]), as.integer(ylims[4,3])))),
+    scale_override(5, scale_y_continuous(limits = c(as.integer(ylims[5,2]), as.integer(ylims[5,3])))),
+    scale_override(6, scale_y_continuous(limits = c(as.integer(ylims[6,2]), as.integer(ylims[6,3])))),
+    scale_override(7, scale_y_continuous(limits = c(as.integer(ylims[7,2]), as.integer(ylims[7,3])))),
+    scale_override(8, scale_y_continuous(limits = c(as.integer(ylims[8,2]), as.integer(ylims[8,3])))),
+    scale_override(9, scale_y_continuous(limits = c(as.integer(ylims[9,2]), as.integer(ylims[9,3])))),
+    scale_override(10, scale_y_continuous(limits = c(as.integer(ylims[10,2]), as.integer(ylims[10,3])))),
+    scale_override(11, scale_y_continuous(limits = c(as.integer(ylims[11,2]), as.integer(ylims[11,3]))))
+  ))
 p
 
 pdf(file="qPCR.pdf",height=4.5,width=5)
@@ -99,8 +186,6 @@ text(0,5,"Oil",pos=4,col="cyan",font=2)
 text(0,3,"Wasp Homogenate",pos=4,col="pink",font=2)
 
 dev.off()
-
-
 
 
 #Plot DeltaDelta Ct - just averages
